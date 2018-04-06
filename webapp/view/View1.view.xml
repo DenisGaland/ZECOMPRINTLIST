@@ -1,0 +1,23 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified" xmlns="sap.m"
+	xmlns:core="sap.ui.core" controllerName="z.ecomprintlist.controller.View1" displayBlock="true">
+	<App id="idAppControl" class="sapUiSizeCompact">
+		<pages>
+			<Page showHeader="false" binding="{GETPLANT>/S_T001WSet(Type='')}">
+				<content>
+					<core:Icon src="sap-icon://home" size="2em" id="__icon0"/>
+					<Label design="Bold" text="{GETPLANT>EPlant} {GETPLANT&gt;ET001w/Name1}"/>
+					<HBox alignItems="Center" class="sapUiTinyMargin">
+						<items>
+							<Button id="calendarbutton" icon="sap-icon://calendar" text="Choose date" press="chooseDate" type="Emphasized"/>
+							<u:Calendar id="calendar" select="handleCalendarSelect" visible="false"/>
+							<Label id="label_date" design="Bold" class="sapUiTinyMargin"/>
+						</items>
+					</HBox>
+					<HBox class="sapUiTinyMargin">
+						<Button id="saveButton" icon="sap-icon://save" text="Process List" press="processList" visible="false" type="Emphasized"/>
+					</HBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
